@@ -1,4 +1,4 @@
- // script.js
+// script.js
 
 let categoriesData = [];
 
@@ -63,7 +63,7 @@ function displayChart(monthlyBudget) {
     options: {
       title: {
         display: true,
-        text: Budget Distribution (${monthlyBudget} Budget),
+        text: `Budget Distribution ($${monthlyBudget} Budget)`,
         fontSize: 16,
       },
     },
