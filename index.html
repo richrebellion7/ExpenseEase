@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Budget Tracker</h1>
+
+    <form id="budgetForm">
+      <label for="monthlyBudget">Monthly Budget:</label>
+      <input type="number" id="monthlyBudget" required>
+
+      <div id="categories">
+        <div class="category">
+          <label for="category">Category:</label>
+          <select id="category" required>
+            <option value="food">Food</option>
+            <option value="utilities">Utilities</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="other">Other</option>
+            <!-- 'Other' option allows users to input custom category -->
+          </select>
+
+          <button type="button" onclick="addCustomCategory()">Other</button>
+          
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" required>
+        </div>
+      </div>
+
+      <button type="button" onclick="addCategory()">Add Category</button>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="chartContainer">
+      <!-- Chart will be displayed here -->
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
